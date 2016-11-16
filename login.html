@@ -9,6 +9,24 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.7.0/css/font-awesome.min.css" media="screen">
+    <style type="text/css">
+      html,body{
+        height: 100%;
+      }
+      body{
+        background:url(images/login-bg.jpg) no-repeat;
+        background-size: cover;
+      }
+      header{
+        background: rgba(255,255,255,.3);
+      }
+      .login-link{
+        background-color: #eb5256;
+      }
+      .main-menu ul li a{
+        color:#333;
+      }
+    </style>
   </head>
   <body>
     <!-- header start-->
@@ -23,7 +41,7 @@
             <div class="col-md-10 col-xs-10">
               <nav class="main-menu">
                   <ul>
-                      <li class="menu-item"><a href="index.html">主&nbsp;&nbsp;页</a></li>
+                      <li class="menu-item"><a href="home.html">主&nbsp;&nbsp;页</a></li>
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-703"><a href="#">小&nbsp;东&nbsp;西</a></li>
                       <li class="menu-item"><a href="#">南&nbsp;&nbsp;墙</a></li>
                       <li class="menu-item"><a href="#">尘&nbsp;&nbsp;埃</a></li>
@@ -37,27 +55,17 @@
    </header>
    <!-- header end -->
 
-   <!-- section1 start -->
-   <section id="before-after">
-      <div class="view view-before">
-          <div class="simple-content">
-              <h2>
-                This is my small world ！
-                <span>"我欲乘风破浪，踏遍黄沙海洋"</span>
-              </h2>
-              <a href="#" class="btn-sumary" title="">点击这里<i class="fa fa-chevron-right"></i></a>
-          </div>
-      </div>
-      <div class="view view-after">
-          <div class="simple-content">
-                  <div class="img-position">
-                      <img src="images/head-dot.png">
-                  </div>
-                  <h3>I make <span class="color-main">wonderful and intersting</span> things for display page.</h3>
-          </div>
-      </div>
-   </section>
-   <!-- section1 end -->
+   <!-- login start -->
+   <div class="login-ck">
+       <div class="login-content">
+         <h2>登录 my site</h2>
+         <span>输入您的用户名和密码</span>
+         <input type="text" placeholder="用户名..." name="username" class="input-box">
+         <input type="password" placeholder="密码..." name="password" class="input-box">
+         <input type="submit" value="登录" class="input-box btn-submit">
+       </div>
+   </div>
+   <!-- login end -->
   
   </body>
 </html>
