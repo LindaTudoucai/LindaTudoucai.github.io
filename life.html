@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <meta charset='utf-8'>
+    <link rel="shortcut icon" type="image/x-icon" href="images/web.ico" media="screen">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tudoucai</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.7.0/css/font-awesome.min.css" media="screen">
+<script type="text/javascript" src="javascripts/jquery-3.1.1.min.js"></script>  
+<style type="text/css">  
+</style>  
+<script type="text/javascript">  
+$(function(){  
+        $.getJSON("json/life.js",function(data){  
+	            var $jsontip = $("#jsonTip");  
+	            var strHtml = "";//存储数据的变量  
+	            $jsontip.empty();//清空内容  
+	            $.each(data,function(infoIndex,info){  
+                    var src = info["src"];
+                    strHtml +="<div class='article'>";
+                    strHtml += "<div class='art-img'><img src="+src+"></div>";  
+	                  strHtml += "<div class='art-title'><a href='#'>"+info["title"]+"</a></div>";  
+	                  strHtml += "<div class='art-content'>"+info["context"]+"</div>"; 
+	                  strHtml += "</div>"  
+	                })  
+	            $jsontip.html(strHtml);//显示处理后的数据     
+            })  
+ })  
+
+    
+
+</script>  
+</head>  
+  
+<body>  
+   <!-- header start-->
+   <header>
+     <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-xs-2">
+              <a href="#" class="linklogo">
+                <img src="images/logo.png">
+              </a>
+            </div>
+            <div class="col-md-10 col-xs-10">
+              <nav class="main-menu">
+                  <ul>
+                      <li class="menu-item"><a href="index.html">主&nbsp;&nbsp;页</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-703"><a href="#">小&nbsp;东&nbsp;西</a></li>
+                      <li class="menu-item"><a href="#">南&nbsp;&nbsp;墙</a></li>
+                      <li class="menu-item"><a href="#">尘&nbsp;&nbsp;埃</a></li>
+                      <li class="menu-item"><a href="#">臆&nbsp;&nbsp;想</a></li>
+                  </ul>
+                  <a href="login.html" class="login-link">LOGIN</a>
+              </nav>
+            </div>
+        </div>
+     </div>
+   </header>
+   <!-- header end -->
+   
+<div id="divframe" style="margin-top:200px;">  
+    <div id="jsonTip">  
+    </div>  
+</div>  
+</body>  
+</html>  
