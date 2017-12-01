@@ -55,7 +55,6 @@ table {
 body, button, input, select, textarea {
     color: #404040;
     font-size: 14px;
-    /*line-height: 1.7;*/
     font-family: "proxima-nova", sans-serif;
 }
 a:hover{
