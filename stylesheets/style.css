@@ -1,6 +1,6 @@
 *{
-    margin:0;
-    padding: 0;
+	margin:0;
+	padding: 0;
     font-family: "microsoft yahei";
 }
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
@@ -55,6 +55,7 @@ table {
 body, button, input, select, textarea {
     color: #404040;
     font-size: 14px;
+    /*line-height: 1.7;*/
     font-family: "proxima-nova", sans-serif;
 }
 a:hover{
